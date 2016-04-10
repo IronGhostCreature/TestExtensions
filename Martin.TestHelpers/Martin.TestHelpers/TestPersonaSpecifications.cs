@@ -47,5 +47,23 @@ namespace Martin.TestHelpers
             //Assert
             testPersona.Name.Should().Be(expectedName);
         }
+
+        [Test]
+        public void Can_find_persona_by_name()
+        {
+            //Arrange 
+            const string targetName = "laura";
+            var register=AssetRegister.Create();
+            var persona1=new Assets.Persona("fred");
+            var persona2=new Assets.Persona("david");
+            var targetPersona=new Assets.Persona(targetName);
+
+            //Act
+            register.Personas.Add(persona1);
+            register.Personas.Add(persona2);
+            register.Personas.Add(targetPersona);
+            //Assert   
+            register.Personas.Find(targetName);
+        }
     }
 }
