@@ -1,9 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using Utils;
 
 namespace Martin.TestHelpers.Utils
 {
     public interface IAssetRegister
     {
-        List<IPersona> Personas {get;}
+        PersonaList Personas {get;}
     }
 }

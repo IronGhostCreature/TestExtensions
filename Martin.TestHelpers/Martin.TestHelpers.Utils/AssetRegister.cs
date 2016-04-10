@@ -6,13 +6,13 @@ namespace Martin.TestHelpers.Utils
     {
         private AssetRegister()
         {
-            Personas=new List<IPersona>();
+            Personas=new PersonaList();
         }
         public static IAssetRegister Create()
         {
             return new AssetRegister();
         }
 
-        public List<IPersona> Personas { get; private set; }
+        public PersonaList Personas { get; private set; }
     }
 }
