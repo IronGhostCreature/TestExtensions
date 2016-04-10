@@ -34,5 +34,18 @@ namespace Martin.TestHelpers
             //Assert
             register.Personas[0].Should().Be(testPersona);
         }
+
+        [Test]
+        public void Persona_has_name()
+        {
+            //Arrange
+            const string expectedName = "cindy";
+
+            //Act 
+           var testPersona= new Assets.Persona(expectedName);
+
+            //Assert
+            testPersona.Name.Should().Be(expectedName);
+        }
     }
 }

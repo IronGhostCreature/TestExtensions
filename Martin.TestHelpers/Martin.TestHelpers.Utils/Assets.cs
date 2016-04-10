@@ -6,7 +6,16 @@ namespace Utils
     {
         public class Persona : IPersona
         {
-            
+            public string Name { get;private set; }
+
+            public Persona(string name)
+            {
+                Name = name;
+            }
+
+            public Persona()
+            {
+            }
         }
     }
 }
